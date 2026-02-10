@@ -11,3 +11,13 @@ export async function GET() {
         )
     }
 }
+
+export async function POST(request: NextRequest) {
+    const body = await request.json()
+    try {
+        const result = await usuarioController.crearUsuario(body);
+        return NextResponse.json({id_usuario: `${result}`},{status:201});
+    }catch(error){
+        return NextResponse.json({error: "Hubo un error" + error});
+    }
+}

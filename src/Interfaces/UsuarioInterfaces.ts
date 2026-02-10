@@ -7,3 +7,9 @@ export interface UsuarioRes extends RowDataPacket{
     rol_usuario: string;
     fecha_registro: string;
 }
+
+export interface UsuarioReq {
+    nombre_usuario: string;
+    correo_usuario: string;
+    clave_usuario: string;
+}
