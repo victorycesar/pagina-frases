@@ -13,3 +13,12 @@ export interface UsuarioReq {
     correo_usuario: string;
     clave_usuario: string;
 }
+
+export interface UsuarioReqEdit {
+    nombre_usuario: string;
+    correo_usuario: string;
+}
+
+export interface UsuarioReqEditPassword {
+    clave_usuario: string;
+}
