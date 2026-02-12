@@ -11,8 +11,8 @@ import { Card } from '@/Components/UI/Card';
 export default function LoginPage() {
   const router = useRouter();
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    correo_usuario: '',
+    clave_usuario: ''
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(false);
@@ -60,16 +60,16 @@ export default function LoginPage() {
           <Input
             label="Email"
             type="email"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            value={formData.correo_usuario}
+            onChange={(e) => setFormData({ ...formData, correo_usuario: e.target.value })}
             required
           />
 
           <Input
             label="Contraseña"
             type="password"
-            value={formData.password}
-            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+            value={formData.clave_usuario}
+            onChange={(e) => setFormData({ ...formData, clave_usuario: e.target.value })}
             required
           />
 
